@@ -25,7 +25,7 @@ initial_SIRN=[S(1) I(1) R(1) N(1)];
 ini=[1 0.5];
 ub=[10 1];
 lb=[0 0];
-y=lsqcurvefit(@ftemp,ini,time,data,lb,ub);
+y=lsqcurvefit(@ftSIR,ini,time,data,lb,ub);
 beta=y(1); alpha=y(2);
 
 for i=1:length(time)-1
